@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
-//const Model1 = require('../models/model1.model');
-//const Model2 = require('../models/model2.model');
+const Columns = require('../models/Columns.model');
+const Cards = require('../models/Cards.model');
 
 const dbtitle = 'base-api';
 mongoose.connect(`mongodb://localhost/${dbtitle}`);
-//Model1.collection.drop();
-//Model2.collection.drop();
+Columns.collection.drop();
+Cards.collection.drop();

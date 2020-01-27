@@ -4,6 +4,7 @@ const createError = require('http-errors');
 
 module.exports.list = (req, res, next) => {
 	Column.find()
+		.sort({position: -1})
 		.populate('cards')
 		.then(
 			columns => res.json(columns)
